@@ -1,12 +1,11 @@
 <?php
 function hasPrefix($string, $prefix) {
     $pos = strpos($string, $prefix);
-
-    if ($pos === false) {
-        $found = false;
+    if ($pos === 0) {
+        $found = true;
         return $found;
     }
-    $found = true;
+    $found = false;
     return $found;
 }
 
