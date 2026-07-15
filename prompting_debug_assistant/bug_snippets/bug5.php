@@ -10,4 +10,3 @@ $text = "hello world";
 $search = "hello";
 $res = hasPrefix($text, $search);
 echo $res;
-

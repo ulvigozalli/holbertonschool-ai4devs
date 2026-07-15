@@ -5,11 +5,8 @@ function printNumbers($max) {
         echo "Number: " . $i . "\n";
         $i++;
     }
-    return true;
 }
-
 $limit = 5;
-$result = printNumbers($limit);
-if ($result) {
-    echo "Execution finished successfully.";
+if ($limit > 0) {
+    printNumbers($limit);
 }
