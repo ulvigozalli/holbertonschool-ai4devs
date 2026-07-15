@@ -15,6 +15,7 @@
 **Issue Type**: Runtime exception.  
 **Notes**: Passing `0` as the second argument causes a fatal `DivisionByZeroError` exception during execution.
 
+
 ## Bug 4 – bug4.php
 **Intended Behavior**: Iterate through the array and print each color name.  
 **Issue Type**: Off-by-one / loop logic issue.  
