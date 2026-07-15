@@ -1,7 +1,8 @@
 <?php
 function hasPrefix($string, $prefix) {
     $pos = strpos($string, $prefix);
-    if ($pos == false) {
+
+    if ($pos === false) {
         $found = false;
         return $found;
     }
@@ -11,8 +12,9 @@ function hasPrefix($string, $prefix) {
 
 $text = "hello world";
 $search = "hello";
-if (hasPrefix($text, $search)) {
-    echo "Found";
+$result = hasPrefix($text, $search);
+if ($result) {
+    echo "Prefix found!";
 } else {
-    echo "Not Found";
+    echo "Prefix not found!";
 }

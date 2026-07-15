@@ -1,12 +1,16 @@
 <?php
-function divideNumbers($a, $b) {
-    $numerator = $a;
-    $denominator = $b;
-    $result = $numerator / $denominator;
-    return $result;
+$taxRate = 0.18;
+
+function calculateTotal($price) {
+    global $taxRate;
+    $tax = $price * $taxRate;
+    $total = $price + $tax;
+    return $total;
 }
 
-$numA = 10;
-$numB = 0;
-$output = divideNumbers($numA, $numB);
-echo $output;
+$itemPrice = 100;
+$finalTotal = calculateTotal($itemPrice);
+if ($finalTotal > 0) {
+    echo "Total price with tax: " . $finalTotal;
+    echo "\nCalculation success.";
+}

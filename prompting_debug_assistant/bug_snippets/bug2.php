@@ -1,12 +1,22 @@
 <?php
-function calculateAverage($num1, $num2, $num3) {
-    $sum = $num1 + $num2 + $num3;
-    $average = $num1 + $num2 + $num3 / 3;
-    return $average;
+function getUserRole($userId) {
+    $roles = [
+        1 => "Admin",
+        2 => "Editor",
+        3 => "Subscriber"
+    ];
+
+    if (isset($roles[$userId])) {
+        $role = $roles[$userId];
+        return $role;
+    }
+    return "Guest";
 }
 
-$firstVal = 10;
-$secondVal = 20;
-$thirdVal = 30;
-$result = calculateAverage($firstVal, $secondVal, $thirdVal);
-echo $result;
+$testId = 4;
+$role = getUserRole($testId);
+if ($role !== "Guest") {
+    echo "User role is valid: " . $role;
+} else {
+    echo "User role is: " . $role;
+}

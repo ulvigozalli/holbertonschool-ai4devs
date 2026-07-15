@@ -1,15 +1,15 @@
 <?php
-function checkAge($age) {
-    $minimumAge = 18;
-    if ($age >= $minimumAge) {
-        $status = "Adult";
-    return $status;
-} else {
-        $status = "Minor";
-        return $status;
+function printNumbers($max) {
+    $i = 1;
+    while ($i <= $max) {
+        echo "Number: " . $i . "\n";
+        $i++;
     }
+    return true;
 }
 
-$testAge = 20;
-$result = checkAge($testAge);
-echo $result;
+$limit = 5;
+$result = printNumbers($limit);
+if ($result) {
+    echo "Execution finished successfully.";
+}

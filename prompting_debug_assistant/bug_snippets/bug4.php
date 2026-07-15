@@ -1,12 +1,17 @@
 <?php
-function printColors($colors) {
-    $total = count($colors);
-    for ($i = 0; $i <= $total; $i++) {
-        $currentColor = $colors[$i];
-        echo $currentColor;
-        echo " ";
+function getFirstElements($array, $count) {
+    $result = [];
+
+    for ($i = 0; $i < $count; $i++) {
+        if (isset($array[$i])) {
+            $result[] = $array[$i];
+        }
     }
+    return $result;
 }
 
-$list = ["red", "green", "blue"];
-printColors($list);
+$data = ["Apple", "Banana", "Cherry"];
+$subset = getFirstElements($data, 2);
+if (count($subset) > 0) {
+    print_r($subset);
+}
